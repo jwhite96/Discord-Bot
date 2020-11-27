@@ -1,0 +1,18 @@
+Battle Bets
+
+> Create a new bet
+> Add friends to a particular bet
+> Points or currency system
+> Leaderboard
+> View current bets
+> View number of points/money
+> View leaderboard
+
+Bet Object:
+> ID - Int
+> Included friends [] - List
+> What the bet is - String
+> How much the bet is for - Int
+> End Date - String/DateTime
+> Outcome [] - List
+	> Possibility for multiple outcomes?
