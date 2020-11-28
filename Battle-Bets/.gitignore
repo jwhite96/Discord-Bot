@@ -1,5 +1,8 @@
 # Environments
 .env
 
+# Misc
+misc
+
 #Json Files
 users.Json

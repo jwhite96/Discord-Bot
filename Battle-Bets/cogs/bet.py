@@ -1,5 +1,5 @@
-import discord
 import json
+import discord
 from datetime import datetime
 from discord.ext import commands
 
@@ -11,7 +11,9 @@ class Bet(commands.Cog):
 
     # new bet command
     @commands.command(name='bet', help='Place a New Bet', pass_context=True)
-    async def bet(self, ctx, *, text):      
+    async def bet(self, ctx, *, text):
+        await ctx.message.delete()
+
         # bet variables
         user = ctx.message.author.name
         time = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -27,7 +29,7 @@ class Bet(commands.Cog):
     # create bet embed
     def printNewBet(self, user, text, time):
         embed=discord.Embed(title=user + " placed a new bet", 
-        description = "```" + text + "```", color=0xff0000)
+        description= "```" + text + "```", color=0x43b581)
         #embed.set_thumbnail(url=ctx.author.avatar_url)
         embed.add_field(name='Points: ', value="```0```", inline=False)
         embed.add_field(name='Bet Ends: ', value="```" + time + "```", inline=False)
