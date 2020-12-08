@@ -29,7 +29,7 @@ class Bet(commands.Cog):
     # create bet embed
     def printNewBet(self, user, text, time):
         embed=discord.Embed(title=user + " placed a new bet", 
-        description= "```" + text + "```", color=0x43b581)
+        description= "```" + text + "```", color=0xfff700)
         #embed.set_thumbnail(url=ctx.author.avatar_url)
         embed.add_field(name='Points: ', value="```0```", inline=False)
         embed.add_field(name='Bet Ends: ', value="```" + time + "```", inline=False)

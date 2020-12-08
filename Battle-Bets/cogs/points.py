@@ -11,22 +11,31 @@ class Points(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         with open('users.json', 'r', encoding='utf8') as f:
-            user = json.load(f)
-        with open('users.json', 'w', encoding='utf8') as f:
-            user[str(message.author.id)] = {}
-            user[str(message.author.id)]['points'] = 0
-            json.dump(user, f, sort_keys=True, indent=4, ensure_ascii=False)
+            users = json.load(f)
+        with open('users.json', 'w', encoding='utf8') as f: #creates duplicates for every message - NEEDS FIXING!!!
+            users['user'].append({
+                'userID': str(message.author.id),
+                'points': '0',
+            })
+
+            json.dump(users, f, sort_keys=True, indent=4, ensure_ascii=False)
 
 # view leader board command
     @commands.command(name='leaders', help='View Leaderboard')
     async def leaders(self, ctx):
         
-        # read from json
-        ...
+        embed = discord.Embed(title="Leaderboard 👑", description="", color=0xfff700)
 
-        embed = discord.Embed(title="Leaderboard 👑",
-                              description=" ",
-                              color=0xfff700)
+        # read from json
+        with open('users.json') as f:
+                users = json.load(f)
+
+        for user in users['user']:
+            username = user.get('userID', user)
+            points = user.get('points', user)
+            embed.add_field(name="User: " + username, value="Points: " + points, inline=False)
+        f.close()
+
         await ctx.send(embed=embed)
 
 # view users points command
