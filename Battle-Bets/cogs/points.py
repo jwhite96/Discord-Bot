@@ -15,6 +15,7 @@ class Points(commands.Cog):
         with open('users.json', 'w', encoding='utf8') as f: #creates duplicates for every message - NEEDS FIXING!!!
             users['user'].append({
                 'userID': str(message.author.id),
+                'user': str(message.author.name),
                 'points': '0',
             })
 
@@ -32,7 +33,7 @@ class Points(commands.Cog):
 
         # get points
         for user in users['user']:
-            username = user.get('userID', user)
+            username = user.get('user', user)
             points = user.get('points', user)
             embed.add_field(name="User: " + username, value="Points: " + points, inline=False)
         f.close()
