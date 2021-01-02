@@ -1,0 +1,16 @@
+{
+    "bet": [
+        {
+            "bet": "you're a fuckwit",
+            "status": 0,
+            "time": "2021-01-02 22:52",
+            "user": "Smej"
+        },
+        {
+            "bet": "fuck this",
+            "status": 1,
+            "time": "2021-01-02 22:57",
+            "user": "Smej"
+        }
+    ]
+}

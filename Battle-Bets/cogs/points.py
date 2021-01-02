@@ -24,12 +24,13 @@ class Points(commands.Cog):
     @commands.command(name='leaders', help='View Leaderboard')
     async def leaders(self, ctx):
         
-        embed = discord.Embed(title="Leaderboard 👑", description="", color=0xfff700)
+        embed = discord.Embed(title="Leaderboard 👑", description="", color=0x00b8b5)
 
         # read from json
         with open('users.json') as f:
                 users = json.load(f)
 
+        # get points
         for user in users['user']:
             username = user.get('userID', user)
             points = user.get('points', user)

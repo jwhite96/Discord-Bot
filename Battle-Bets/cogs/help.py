@@ -8,7 +8,7 @@ class Help(commands.Cog):
 
     @commands.command(name='?', help='Bot Information')
     async def info(self, ctx):
-        embed=discord.Embed(title="Battle Bets", description="--- Short Description ---", color=0x43b581)
+        embed=discord.Embed(title="Battle Bets", description="--- Short Description ---", color=0x00b8b5)
         embed.add_field(name="Help", value="Type $help to get the full list of commands", inline=False)
         embed.add_field(name="Bets", value="Type $bet to start a new bet", inline=False)
         embed.add_field(name="Bank", value="Type $bank to view your own balance", inline=False)
