@@ -17,7 +17,7 @@ Battle Bets is a discord bot capable of creating "bets" with friends. These bets
 - Website: n/a
 
 ## Functionality:
-- **Create a new bet** - UNDER TEST
+- **Create a new bet** - COMPLETED
 - **Add friends to a particular bet** - NOT STARTED
 - **Points system** - UNDER DEVELOPMENT
 - **View Leaderboard** - UNDER DEVELOPMENT
