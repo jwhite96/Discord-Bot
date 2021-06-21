@@ -1,5 +1,5 @@
 ## BATTLE BETS DISCORD BOT
-* **STATUS**: STILL UNDER DEVELOPMENT 
+* **STATUS**: ON HOLD
 * **VERSION**: 0.0.1 **DATE**: 24/11/2020
 * **DESC**: A Discord Bot To Allow Bets To Be Made Between Users (Points System)
 * **OWNERS**: James White, Jacob Male
